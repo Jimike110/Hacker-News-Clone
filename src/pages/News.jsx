@@ -4,13 +4,8 @@ import NewsPageItem from "../components/NewsPageItem";
 import Comments from "../components/Comments";
 
 const News = () => {
-  const { news, loader, fetchNews } = useNews();
+  const { news } = useNews();
   const { id } = useParams();
-
-//   useEffect(() => {
-//     fetchNews(); // Fetch news when the component mounts
-//   }, [fetchNews]);
-
 
   const selectedNews = news.find((item) => item.id === Number(id));
 
