@@ -17,3 +17,9 @@ body {
 * {
   box-sizing: border-box;
 }
+.comment a {
+  color: rgb(167 139 250);
+}
+code {
+  text-wrap: wrap;
+}

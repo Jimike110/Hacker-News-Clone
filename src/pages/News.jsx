@@ -1,6 +1,7 @@
 import useNews from "../components/useNews";
 import { useParams, Link } from "react-router-dom";
 import NewsPageItem from "../components/NewsPageItem";
+import Comments from "../components/Comments";
 
 const News = () => {
   const { news, loader, fetchNews } = useNews();
@@ -32,6 +33,9 @@ const News = () => {
         </Link>
       </div>
       <NewsPageItem data={selectedNews} />
+      <section className="comments-section my-16">
+        <Comments data={selectedNews}/>
+      </section>
     </div>
   );
 };

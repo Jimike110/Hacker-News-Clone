@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import NewsItem from "../components/NewsItem";
 import useNews from "../components/useNews";
 import RefreshButton from "../components/RefreshButton";
@@ -11,10 +11,20 @@ const Home = () => {
     fetchNews();
   };
 
+  // useEffect(() => {
+  //   return (
+  //     loader && (
+  //       <div className="text-3xl flex items-center justify-center text-white font-bold h-screen">
+  //       Loading...
+  //     </div>
+  //     )
+  //   );
+  // }, []);
+
   return (
     <div className="home">
       <div className="flex justify-between items-center m-auto mb-8 max-w-4xl">
-        <h1 className="text-3xl text-white font-bold">100 Latest News</h1>
+        <h1 className="text-3xl text-white font-bold">HackerNews Clone</h1>
         <RefreshButton clickAction={fetchData} loader={loader} />
       </div>
       {news.map((eachNews) => (
