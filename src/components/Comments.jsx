@@ -53,7 +53,7 @@ const Comments = ({ data }) => {
         <h2 className="text-2xl text-white font-bold mb-5">All Comments</h2>
         <RefreshButton loader={loader} clickAction={() => fetchData()}/>
         </div>
-        {comments.map((comment) => (
+        {comments.filter(comment => !comment.dead).map((comment) => (
           <div
             className="rounded-lg p-6 my-4 dark:bg-gray-900"
             key={comment.id}
