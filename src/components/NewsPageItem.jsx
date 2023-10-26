@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const NewsPageItem = ({ data }) => {
   const { title, descendants, by, time, url } = data;
 

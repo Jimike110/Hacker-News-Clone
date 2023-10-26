@@ -43,6 +43,7 @@ const Comments = ({ data }) => {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, [data.kids]);
 
   return (
