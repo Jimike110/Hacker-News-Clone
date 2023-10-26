@@ -44,7 +44,7 @@ const Comments = ({ data }) => {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [data.kids]);
 
   return (
     <div className="dark:text-gray-100 rounded-lg my-2">
@@ -64,7 +64,7 @@ const Comments = ({ data }) => {
               </span>
               <span>
                 <span className="text-sm dark:text-gray-400">
-                  Nested comments:{" "}
+                  Replies:{" "}
                 </span>
                 <span className="px-1 py-1 font-semibold text-sm rounded dark:bg-violet-400 dark:text-gray-900">
                   {comment.kids ? comment.kids.length : 0}
@@ -84,7 +84,7 @@ const Comments = ({ data }) => {
                 className="text-violet-400"
                   onClick={() => setNestedComments(comment.nestedComments)}
                 >
-                  Load Nested Comments
+                  Load Replies
                 </button>
               )}
               </div>

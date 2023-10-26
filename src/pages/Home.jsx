@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import NewsItem from "../components/NewsItem";
 import useNews from "../components/useNews";
 import RefreshButton from "../components/RefreshButton";
@@ -7,19 +6,8 @@ const Home = () => {
   const { news, loader, fetchNews } = useNews();
 
   const fetchData = () => {
-    // setLoader(true);
     fetchNews();
   };
-
-  // useEffect(() => {
-  //   return (
-  //     loader && (
-  //       <div className="text-3xl flex items-center justify-center text-white font-bold h-screen">
-  //       Loading...
-  //     </div>
-  //     )
-  //   );
-  // }, []);
 
   return (
     <div className="home">
