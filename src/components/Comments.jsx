@@ -96,7 +96,7 @@ const Comments = ({ data }) => {
                 </span>
               </div>
             </div>
-            {nestedComments.map((nestedComment) => (
+            {nestedComments.filter(nestedComment => !nestedComment.dead).map((nestedComment) => (
               nestedComment.parent === comment.id ?
               <div key={nestedComment.id} className="nested-comment rounded-lg mt-3 ml-5 p-3 shadow-sm bg-gray-700">
                 <div className="flex items-center justify-between">
