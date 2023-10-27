@@ -47,26 +47,26 @@ const Comments = ({ data }) => {
   }, [data.kids]);
 
   return (
-    <div className="dark:text-gray-100 rounded-lg my-2">
-      <div className="container max-w-4xl px-6 py-6 mx-auto rounded-lg shadow-sm dark:bg-gray-700">
+    <div className="text-gray-100 rounded-lg my-2">
+      <div className="container max-w-4xl px-6 py-6 mx-auto rounded-lg shadow-sm bg-gray-700">
         <div className="comments-heading flex justify-between">
         <h2 className="text-2xl text-white font-bold mb-5">All Comments</h2>
         <RefreshButton loader={loader} clickAction={() => fetchData()}/>
         </div>
         {comments.filter(comment => !comment.dead).map((comment) => (
           <div
-            className="rounded-lg p-6 my-4 dark:bg-gray-900"
+            className="rounded-lg p-6 my-4 bg-gray-900"
             key={comment.id}
           >
             <div className="flex items-center justify-between">
-              <span className="text-sm dark:text-gray-400">
+              <span className="text-sm text-gray-400">
                 {new Date(comment.time * 1000).toLocaleDateString()}
               </span>
               <span>
-                <span className="text-sm dark:text-gray-400">
+                <span className="text-sm text-gray-400">
                   Replies:{" "}
                 </span>
-                <span className="px-1 py-1 font-semibold text-sm rounded dark:bg-violet-400 dark:text-gray-900">
+                <span className="px-1 py-1 font-semibold text-sm rounded bg-violet-400 text-gray-900">
                   {comment.kids ? comment.kids.length : 0}
                 </span>
               </span>
@@ -90,7 +90,7 @@ const Comments = ({ data }) => {
               </div>
               <div>
                 <span className="flex items-center">
-                  <span className="hover:underline dark:text-gray-400">
+                  <span className="hover:underline text-gray-400">
                     {comment.by}
                   </span>
                 </span>
@@ -100,7 +100,7 @@ const Comments = ({ data }) => {
               nestedComment.parent === comment.id ?
               <div key={nestedComment.id} className="nested-comment rounded-lg mt-3 ml-5 p-3 shadow-sm bg-gray-700">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm dark:text-gray-400">
+                  <span className="text-sm text-gray-400">
                     {new Date(nestedComment.time * 1000).toLocaleDateString()}
                   </span>
                 </div>
@@ -113,7 +113,7 @@ const Comments = ({ data }) => {
                 <div className="flex items-center justify-end mt-2">
                   <div>
                     <span className="flex items-center">
-                      <span className="hover:underline text-sm dark:text-gray-400">
+                      <span className="hover:underline text-sm text-gray-400">
                         {nestedComment.by}
                       </span>
                     </span>

@@ -23,7 +23,7 @@ const News = () => {
         <a href={selectedNews.url} className="text-2xl text-white underline font-bold truncate">{selectedNews.url}</a>
         <Link
         to="/"
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm ml-3 px-5 py-2.5 text-center dark:bg-gray-900 hover:dark:bg-gray-950 dark:focus:bg-gray-900 inline-flex items-center"
+        className="text-white focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm ml-3 px-5 py-2.5 text-center bg-gray-950 focus:bg-gray-900 inline-flex items-center"
       >Home
         </Link>
       </div>
