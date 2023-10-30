@@ -1,6 +1,6 @@
 import "./index.css";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom/cjs/react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom/cjs/react-router-dom";
 import Home from "./pages/Home";
 import News from "./pages/News";
 
